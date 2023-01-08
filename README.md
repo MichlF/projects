@@ -1,5 +1,5 @@
 ## An incomplete collection of example coding projects & code snippets
-Feel free to also [check out my blog](blog.michelfailing.de) that has and will discuss some of my past and future projects as well as provide guides regarding data science and networking.
+Feel free to also [check out my blog](https://blog.michelfailing.de) that has and will discuss some of my past and future projects as well as provide guides regarding data science and networking.
 
 #### Apps and app-likes
 - [Berlin Bürgerservice Bot](https://github.com/MichlF/berlin_buergerservice_bot): Webscraper app that scans Berlin's municipality appointment service website for available timeslots of Berlin's Administrative Office for Citizens.
