@@ -1,4 +1,4 @@
-## An incomplete collection of example coding projects & code snippets
+## A (probably) incomplete collection of example coding projects & code snippets
 Feel free to also [check out my blog](https://blog.michelfailing.de) that has and will discuss some of my past and future projects as well as provide guides regarding data science and networking.
 
 #### Apps and app-likes
