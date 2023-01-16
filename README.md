@@ -7,7 +7,7 @@ Feel free to also [check out my blog](https://blog.michelfailing.de) that has an
 - [Color wheel](https://github.com/MichlF/misc/blob/master/colors_colorwheel): Color-wheel generator for isoluminant colors in HSV, Cie-L*ab and Xyz space ready to be applied to *PsychoPy*.
 - [Pokerstars Reader](https://github.com/MichlF/pokerstars_reader): App that provides live table and player statistics when playing Poker on a PokerStars table.
 - [RPi: Face recognition](): App that allows *Raspberry Pis* to detect and recognize faces using one's own pretrained face recognition model.
-- [RPi: LCD Moisture Meter](https://github.com/MichlF/moisture_meter): App that allows *Raspberry Pi Pico* microcontrollers to display soil humidity levels measured by capacitive onto a LCD screen.
+- [RPi: LCD Moisture Meter](https://github.com/MichlF/rpi_moisture_meter): App that allows *Raspberry Pi Pico* microcontrollers to display soil humidity levels measured by capacitive onto a LCD screen.
 - [RPi: Motion detection](): App that allows *Raspberry Pis* to detect motion based on PIR sensor input.
 
 ### Modules / Wrapper
@@ -16,17 +16,18 @@ Feel free to also [check out my blog](https://blog.michelfailing.de) that has an
 
 
 ### Data Science
-- [AWS Dashboard](): Interactive dashboard for analyzing the Northwind database using *AWS* *RDS* & *EC2*, *PostgreSQL* and *Metabase*.
-- [Classification: Identifying Animals from Pictures](): Implementation of the MobileNetV2 deep neural network to classify animal (races) from pictures using *Tensorflow* / *Keras*.
-- [Classification: the Titanic dataset](): A Kaggle Competition to predict the survival of passengers from the famous Titanic cruise ship using classification models in *scikit-learn*.
-- [Deep Learning Objects](): *Artificial* and *convolutional neural network* that detect object categories in webcam images using *Tensorflow* / *Keras*.
+- [Classification: Identifying Animals from Pictures](https://github.com/MichlF/projects/tree/main/data_science/classification_animals): Implementation of the MobileNetV2 deep neural network to classify animal (races) from pictures using *Tensorflow* / *Keras*.
+- [Classification: the Titanic dataset](https://github.com/MichlF/projects/tree/main/data_science/classification_titanic): A Kaggle Competition to predict the survival of passengers from the famous Titanic cruise ship using classification models in *scikit-learn*.
+- [Database Dashboard](https://github.com/MichlF/projects/tree/main/data_science/database_dashboard): Interactive dashboard for analyzing the Northwind database using *AWS* *RDS* & *EC2*, *PostgreSQL* and *Metabase*.
+- [Deep Learning Objects: webcam images](https://github.com/MichlF/projects/tree/main/data_science/deep_learning_objects_webcam): An *artificial* and *convolutional neural network* that classifies object categories in webcam images using *Tensorflow* / *Keras*.
+- [Deep Learning Objects: the MNIST dataset](https://github.com/MichlF/projects/tree/main/data_science/deep_learning_objects_mnist): An *artificial* and *convolutional neural network* that classifies handwritten digits from images of the MNIST dataset using *Tensorflow* / *Keras*.
 - [fMRI NRoST](): Data analysis project of a functional magnetic resonance imaging experiment for an upcoming scientific peer-reviewed publication.
-- [Natural Language Lyricizer](): Implementation of a *natural language processing* model to predict music artist from song lyrics alone using *webscraping* and *Bag of Words* modelling.
-- [Supermarket Markov Simulation](): Visualization of supermarket customer behavior based on *Monte Carlo Markov Chain Simulations*.
-- [Unsupervised Movie Recommender](): Web app that recommends movies based on *unsupervised learning* modelling (*Neighborhood-based Collaborative Filtering* and *Collaborative Filtering with Non-Negative Matrix Factorization*) deployed with *Flask*.
-- [Sentiment(al) Reddit Slack Bot](): A *Slack bot* that provides live updates on positive and negative postings regarding the topic of Data Science using *Docker*, *API interactions*, *MongoDB*, *PostgreSQL* and *VADER-sentiment analysis*.
-- [Regression: the Bikeshare dataset](): A Kaggle competition to predict bike rentals from the Bikeshare dataset using regression models in *scikit-learn*.
-- [Temperature forecast for Berlin-Tempelhof](): *Time-series analysis* on temperature data for Berlin-Tempelhof using *AR/SARIMAX* modelling and interactive plotting in *Plotly*.
+- [Natural Language Lyricizer](https://github.com/MichlF/projects/tree/main/data_science/natural_language_lyricizer): Implementation of a *natural language processing* model to predict music artist from song lyrics alone using *webscraping* and *Bag of Words* modelling.
+- [Sentiment(al) Reddit Slack Bot](https://github.com/MichlF/projects/tree/main/data_science/reddit_sentiment): A *Slack bot* that provides live updates on positive and negative postings regarding the topic of Data Science using *Docker*, *API interactions*, *MongoDB*, *PostgreSQL* and *VADER-sentiment analysis*.
+- [Supermarket Markov Simulation](https://github.com/MichlF/projects/tree/main/data_science/supermarket_markov_simulation): Visualization of supermarket customer behavior based on *Monte Carlo Markov Chain Simulations*.
+- [Regression: the Bikeshare dataset](https://github.com/MichlF/projects/tree/main/data_science/regression_bikeshare): A Kaggle competition to predict bike rentals from the Bikeshare dataset using regression models in *scikit-learn*.
+- [Temperature forecast for Berlin-Tempelhof](https://github.com/MichlF/projects/tree/main/data_science/temperature_forecast): Visualization of a *Time-series analysis* on temperature data, i.e. a temperature forecase, for Berlin-Tempelhof using *AR/SARIMAX* modelling and interactive plotting in *Plotly*.
+- [Unsupervised Movie Recommender](https://github.com/MichlF/projects/tree/main/data_science/unsupervised_movie_recommender): Web app that recommends movies based on *unsupervised learning* modelling (*Neighborhood-based Collaborative Filtering* and *Collaborative Filtering with Non-Negative Matrix Factorization*) deployed with *Flask*.
 
 ### Science
 - Resources of a few peer-reviewed publications ([find repository here](https://github.com/MichlF/science_projects)):

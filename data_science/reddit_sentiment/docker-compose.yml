@@ -1,0 +1,49 @@
+version: '3'
+services:
+  # DBs
+  mongodb:
+      container_name: reddit_bot_mongodb
+      image: mongo
+      restart: always
+      ports:
+        - 27017:27017
+  # postgresdb: # uncomment this and all depends_on if you don't wanna use your own postgresdb on the NAS
+  #     image: postgres:latest
+  #     restart: always
+  #     ports:
+  #       - 5555:5432
+  #     env_file:
+  #       - .env
+  # python scripts
+  reddit:
+      container_name: reddit_bot_reddit
+      build: reddit/
+      restart: on-failure
+      volumes:
+        - ./reddit/:/app
+      depends_on:
+        - mongodb
+      env_file:
+        - .env
+  etl:
+      container_name: reddit_bot_etl
+      build: etl/
+      restart: on-failure
+      volumes:
+        - ./etl/:/app
+      depends_on:
+        - mongodb
+        #- postgresdb
+      env_file:
+        - .env
+  slack_bot:
+      container_name: reddit_bot_slack
+      build: slack/
+      restart: on-failure
+      volumes:
+        - ./slack/:/app
+      depends_on:
+        - etl
+        #- postgresdb
+      env_file:
+        - .env

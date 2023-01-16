@@ -1,0 +1,7 @@
+psycopg2-binary
+pymongo==4.3.3
+python-dotenv==0.21.0
+PyYAML==6.0
+SQLAlchemy==1.4.44
+SQLAlchemy_Utils==0.38.3
+vaderSentiment==3.3.2
