@@ -6,9 +6,9 @@ Feel free to also [check out my blog](https://blog.michelfailing.de) that has an
 - [Berlin Bürgerservice Bot](https://github.com/MichlF/berlin_buergerservice_bot): JS *Webscraping* app that scans Berlin's municipality appointment service website for available timeslots of Berlin's Administrative Office for Citizens.
 - [Color wheel](https://github.com/MichlF/misc/blob/master/colors_colorwheel): Color-wheel generator for isoluminant colors in HSV, Cie-L*ab and Xyz space ready to be applied to *PsychoPy*.
 - [Pokerstars Reader](https://github.com/MichlF/pokerstars_reader): App that provides live table and player statistics when playing Poker on a PokerStars table.
-- [RPi: Face recognition](): App that allows *Raspberry Pis* to detect and recognize faces using one's own pretrained face recognition model.
+- [RPi: Face recognition](https://github.com/MichlF/rpi_simple_face_recognition): App that allows *Raspberry Pis* to detect and recognize faces using one's own pretrained face recognition model.
 - [RPi: LCD Moisture Meter](https://github.com/MichlF/rpi_moisture_meter): App that allows *Raspberry Pi Pico* microcontrollers to display soil humidity levels measured by capacitive onto a LCD screen.
-- [RPi: Motion detection](): App that allows *Raspberry Pis* to detect motion based on PIR sensor input.
+- [RPi: Motion detection](https://github.com/MichlF/rpi_motion_detection): App that allows *Raspberry Pis* to detect motion based on PIR sensor input.
 
 ### Modules / Wrapper
 - [PrettyShortML](https://github.com/MichlF/PrettyShortML): *Scikit-learn wrapper* Python module for faster ML model pipelining, better plotting and more.
