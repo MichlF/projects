@@ -6,4 +6,4 @@ The dashboard was originally hosted on AWS but can now be [found here](https://m
 
 Database layout:
 
-![Database layout](https://github.com/MichlF/projects/tree/main/data_science/database_dashboard/Northwind_Database_layout.png)
+![Database layout](https://github.com/MichlF/projects/blob/main/data_science/database_dashboard/Northwind_Database_layout.png?raw=true)
