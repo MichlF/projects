@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{%block content%}
+<div class="text-container">
+    <h4 class="large_body_text text-center mb-5">You wanted to know what the next movie is you should watch. Now, you
+        can make your final choice.
+        <br>But remember... all I am offering is the truth. Nothing more.</br>
+    </h4>
+</div>
+<form action="" method="POST" onsubmit="this.action = location.pathname;">
+    <!-- How many recommendations should be retrieved -->
+    <label for="refinement">How many recommendations do you want?</label>
+    <input type="number" id="n-recommendations" name="n-recommendations" value="5">
+    <!-- Refinment type with default type -->
+    <label for="refinement">Would you like to refine your search ?</label>
+    <select class="refine-type-dropdown" name="refine-type">
+        <option value="none" selected>Just the top recommendations</option>
+        <option value="year">By most recent year</option>
+        <option value="genre">By genre</option>
+        <option value="avgratings">By average ratings of other users</option>
+    </select>
+    <br>
+    <!-- year input -->
+    <div class="recommendation-refinement" id="year-input" style="display:none">
+        <label for="year">Enter a year: </label>
+        <input type="text" id="refine-value-year" name="refine-value-year" placeholder="Enter a year" value="2021">
+    </div>
+    <!-- genre input -->
+    <div class="recommendation-refinement" id="genre-input" style="display:none">
+        <label for="genre">Enter a genre or multiple ones (separated by commas): </label>
+        <input type="text" id="refine-value-genre" name="refine-value-genre" placeholder="Enter a genre" value="Action">
+    </div>
+    <!-- avgratings input -->
+    <div class="recommendation-refinement" id="avgratings-input" style="display:none">
+        <label for="avgratings">Enter a avgratings value: </label>
+        <input type="text" id="refine-value-avgratings" name="refine-value-avgratings"
+            placeholder="Enter an average rating" value="3.5">
+    </div>
+    <!-- Submit your refinement request -->
+    <input id="submit-post" type="submit" value="Recommend me this!">
+</form>
+<div class="text-container text-center mb-5">
+    {% for i in range(poster_links|length) %}
+    <div class="recommendation-container" style="display:inline-block; margin: 0 10px;">
+        <br><span class="title-text-recommendation" id="title_{{i}}">{{ titles[i] }}</span></br>
+        <img src="{{ poster_links[i] }}" alt="Image" class="same-size-image">
+        <div class="genre-container" style="display: flex; flex-wrap: wrap;">
+            {% for genre in genres[i] %}
+            <button class="genre-button text-center mb-5" data-movie-id="{{ i }}">{{ genre }}</button>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<!-- JS script -->
+<!-- Ensure all images have the same dimensions: -->
+<script>
+    var images = document.getElementsByClassName("same-size-image");
+    var minWidth = Number.POSITIVE_INFINITY;
+    var minHeight = Number.POSITIVE_INFINITY;
+    var imagesLoaded = 0;
+    for (var i = 0; i < images.length; i++) {
+        images[i].onload = function () {
+            if (this.width < minWidth) {
+                minWidth = this.width;
+            }
+            if (this.height < minHeight) {
+                minHeight = this.height;
+            }
+            imagesLoaded++;
+            if (imagesLoaded === images.length) {
+                for (var i = 0; i < images.length; i++) {
+                    images[i].width = minWidth;
+                    images[i].height = minHeight;
+                }
+            }
+        }
+    }
+</script>
+<!-- Present input fields depending on selected option -->
+<script>
+    function showInput() {
+        var selectedOption = document.querySelector('.refine-type-dropdown').value;
+        var yearInput = document.getElementById('year-input');
+        var genreInput = document.getElementById('genre-input');
+        var avgratingsInput = document.getElementById('avgratings-input');
+        if (selectedOption == "year") {
+            yearInput.style.display = "block";
+            genreInput.style.display = "none";
+            avgratingsInput.style.display = "none";
+        } else if (selectedOption == "genre") {
+            yearInput.style.display = "none";
+            genreInput.style.display = "block";
+            avgratingsInput.style.display = "none";
+        } else if (selectedOption == "avgratings") {
+            yearInput.style.display = "none";
+            genreInput.style.display = "none";
+            avgratingsInput.style.display = "block";
+        } else {
+            yearInput.style.display = "none";
+            genreInput.style.display = "none";
+            avgratingsInput.style.display = "none";
+        }
+    }
+    document.querySelector('.refine-type-dropdown').addEventListener("change", showInput);
+</script>
+<!-- Get current route to remain on that route when submitting the form -->
+<script>
+    document.querySelector("form").action = location.pathname;
+</script>
+{%endblock%}

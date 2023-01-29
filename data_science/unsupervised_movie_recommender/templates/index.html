@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{%block content%}
+<!-- Instructions div/class -->
+<div class="text-container">
+    <h4 class="title text-center mb-5">"You don't like the idea of not being in control of your next movie choice ?<br>I
+        know exactly what you mean. Let me tell you why you're here.</br></h4>
+    <h4 class="large_body_text text-center mb-5">
+        What you know you can't explain, but you feel it. So, tell me what movies you know and how you feel about them:
+    </h4>
+</div>
+<form action="/" method="POST">
+    <!-- User movie seen (input + dropdown) and rating (slider) -->
+    <label for="movie-title">I've seen the movie:</label>
+    <input type="text" id="movie-title" name="movie-title" list="movie-titles">
+    <datalist id="movie-titles">
+        {% for title in movie_titles %}
+        <option value="{{ title }}"></option>
+        {% endfor %}
+    </datalist>
+    <br>
+    <label for="rating">I rate this movie a <span id="rating-value"></span> out of 5 !</label>
+    <input type="range" min="1" max="5" value="3" class="slider" id="rating-slider" name="rating">
+    <!-- Submit div -->
+    <div class="d-flex justify-content-between">
+        <input id="submit-post" type="submit" value="Add to my list">
+        <button id="button-clear" type="button" onclick="clearMovies()">Clear from my list</button>
+    </div>
+    <!-- Status message div -->
+    <div class="alert">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <p class="message">{{ message }}</p>
+        {% endfor %}
+        {% else %}
+        <p class="message">Choose wisely...</p>
+        {% endif %}
+        {% endwith %}
+    </div>
+    <!-- Another instructions class -->
+    <h4 class="large_body_text text-center mb-5">
+        <br>When you're done, make your recommender choice:</br>
+        <br>You take the <span class="blueText">BLUE</span> pill, the story ends. believe whatever you want to
+        believe.</br>
+        <br>You take the <span class="redText">RED</span> pill, you stay in Wonderland and I show you how deep the
+        rabbit
+        hole goes. Because, unfortunately, no one can be told what the Matrix is. You have to see it for
+        yourself.</br>
+    </h4>
+</form>
+<!-- JS scripts -->
+<!-- Slider output -->
+<script>
+    // Get the slider element
+    var slider = document.getElementById("rating-slider");
+    // Get the value display element
+    var valueDisplay = document.getElementById("rating-value");
+    // Set the value display to the initial value of the slider
+    valueDisplay.innerHTML = slider.value;
+
+    // Update the value display when the slider value changes
+    slider.oninput = function () {
+        valueDisplay.innerHTML = this.value;
+    }
+</script>
+<!-- Dropdown menu -->
+<script>
+    var input = document.getElementById("movie-title");
+    var datalist = document.getElementById("movie-titles");
+    var options = datalist.getElementsByTagName("option");
+
+    input.addEventListener("input", function () {
+        var val = this.value;
+        for (var i = 0; i < options.length; i++) {
+            if (options[i].value === val) {
+                datalist.setAttribute("value", options[i].value);
+                break;
+            }
+        }
+    });
+</script>
+{%endblock%}

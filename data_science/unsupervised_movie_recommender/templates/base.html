@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styling.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>A movie recommender, duhhh!</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="image-body">
+                    <img class="img-fluid">
+                    <div class="body">
+                        <nav class="col-lg-12 navbar flex-column">
+                            <a href="random_recommender" class="nav-item mx-0" onclick="showLoading();">Random
+                                recommender</a>
+                            <a href="nmf_recommender" class="nav-item mx-0" onclick="showLoading();">Non-Negative Matrix
+                                Factorization recommender</a>
+                            <a href="nbcfilter_recommender" class="nav-item mx-0"
+                                onclick="showLoading();">Neighborhood-Based Collaborative Filtering recommender</a>
+                            <a href="{{ url_for('index') }}" class="nav-item mx-0"
+                                onclick="clearMovies(); showLoading();">Talk to Morpheus again (restart)</a>
+                            <div id="loader" class="loader flex-column" style="display: none;"></div>
+                        </nav>
+
+                        {%block content%}
+                        {%endblock%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-center">
+        <div class="text-center p-1" style="color: rgb(155, 155, 155);">
+            © Copyright 2023, Data Nerds & Networks
+        </div>
+    </footer>
+    <!-- Restart the process -->
+    <script>
+        function clearMovies() {
+            fetch('/clear_movies', { method: 'POST' });
+        }
+    </script>
+    <!-- Show loading bar -->
+    <script>
+        function showLoading() {
+            document.getElementById("loader").style.display = "block";
+            fetch('/nbcfilter_recommender')
+                .then(response => {
+                    if (response.ok) {
+                        return response.text();
+                    }
+                    throw new Error('Network response was not ok.');
+                })
+                .then(data => {
+                    document.getElementById("loader").style.display = "none";
+                    // do something with the response data
+                })
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>
