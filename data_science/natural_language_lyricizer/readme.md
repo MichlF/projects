@@ -2,7 +2,7 @@
 
 <h1 align="center">
   <br>
-  <img src="https://github.com/MichlF/projects/raw/main/data_science/unsupervised_movie_recommender/static/images/movie_clap.png" 
+  <img src="https://github.com/MichlF/projects/raw/main/data_science/natural_language_lyricizer/images/guitar.png" 
   title="Image taken from Flaticon: Those Icons" alt="From Flaticon Those Icons" width="75"></a>
   <br>
   Lyricizer
@@ -12,7 +12,6 @@
 <h4 align="center">— Guesses the artist by song lyrics ! —</h4>
 
 <p align="center">
-  <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#contributing">Contributing</a> •
   <a href="#acknowledgements">Acknowledgements</a>
@@ -23,19 +22,7 @@
     <a href="https://github.com/MichlF/sports_object_detection/issues">Request Feature</a>
 </p>
 
-<p align="center">
-    <br>
-    <img src="https://github.com/MichlF/projects/blob/main/data_science/unsupervised_movie_recommender/static/images/website1.PNG?raw=True" alt="Snippet of website" width="500"/>
-    <img src="https://github.com/MichlF/projects/blob/main/data_science/unsupervised_movie_recommender/static/images/website2.PNG?raw=True" alt="Snippet of website" width="500"/>
-    <br>
-</p>
-
-## Key Features
-
-* Recommends movies: randomly, based on non-negative matrix factorization or neighborhood-based collaborative filtering
-* You can further filter any amount of recommendations by year, genre or average userbase rating
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+---
 
 ## How To Use
 
