@@ -4,4 +4,8 @@ A *Slack bot* that provides live updates on positive and negative postings regar
 
 Here is a sample of what the bot can post to Slack:
 
-![Sample output of Slack bot](https://github.com/MichlF/projects/blob/main/data_science/reddit_sentiment/sample_output.png?raw=true)
+<p align="center">
+    <br>
+    <img src="https://github.com/MichlF/projects/blob/main/data_science/reddit_sentiment/sample_output.png?raw=true" alt="Sample output of Slack bot" height="550"/>
+    <br>
+</p>
