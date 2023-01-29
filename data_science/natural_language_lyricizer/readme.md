@@ -5,11 +5,11 @@
   <img src="https://github.com/MichlF/projects/raw/main/data_science/unsupervised_movie_recommender/static/images/movie_clap.png" 
   title="Image taken from Flaticon: Those Icons" alt="From Flaticon Those Icons" width="75"></a>
   <br>
-  Morpheus Movie Oracle
+  Lyricizer
   <br>
 </h1>
 
-<h4 align="center">— A movie recommender website —</h4>
+<h4 align="center">— Guesses the artist by song lyrics ! —</h4>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
@@ -39,13 +39,9 @@
 
 ## How To Use
 
-For this app to work you can either just navigate to [this website]() or clone this repo onto your computer. Make sure to install the requirements from the `requirements.txt` file along with it.
+For this app to work clone this repo onto your computer. Make sure to install the requirements from the `requirements.txt` file along with it.
 
-Once you've ran the preprocessing script to obtain your base models, you can run the `app.py` file either from your IDE or the terminal:
-
-```bash
-python app.py
-```
+You'll first need to train your own model. Either you run the code from `lyricizer.ipynb` script as is or after you made the desired changes to let the model recognize bands that you'll like. After that, you can simply run the `cli_lyricizer.py` file.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -2,7 +2,7 @@
 
 A *Slack bot* that provides live updates on positive and negative postings regarding the topic of Data Science using *Docker*, *API interactions*, *MongoDB*, *PostgreSQL* and *VADER-sentiment analysis*.
 
-Here is a sample of what the bot can post to Slack:
+Here is a sample of what the bot can post to *Slack*:
 
 <p align="center">
     <br>
