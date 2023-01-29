@@ -5,7 +5,7 @@
   <img src="https://github.com/MichlF/projects/raw/main/data_science/unsupervised_movie_recommender/static/images/movie_clap.png" 
   title="Image taken from Flaticon: Those Icons" alt="From Flaticon Those Icons" width="75"></a>
   <br>
-  Object Detection in Sports
+  Morpheus Movie Oracle
   <br>
 </h1>
 
