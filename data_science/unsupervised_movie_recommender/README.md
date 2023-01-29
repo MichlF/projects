@@ -26,7 +26,7 @@
 <p align="center">
     <br>
     <img src="https://github.com/MichlF/projects/blob/main/data_science/unsupervised_movie_recommender/static/images/website1.PNG?raw=True" alt="Snippet of website" width="500"/>
-    <img src="https://github.com/MichlF/projects/blob/main/data_science/unsupervised_movie_recommender/static/images/website1.PNG?raw=True" alt="Snippet of website" width="500"/>
+    <img src="https://github.com/MichlF/projects/blob/main/data_science/unsupervised_movie_recommender/static/images/website2.PNG?raw=True" alt="Snippet of website" width="500"/>
     <br>
 </p>
 
