@@ -11,15 +11,6 @@
 
 <h4 align="center">— A movie recommender website —</h4>
 
-<h1 align="center">
-
-  [![Contributors][contributors-shield]][contributors-url]
-  [![Forks][forks-shield]][forks-url]
-  [![Stargazers][stars-shield]][stars-url]
-  [![Issues][issues-shield]][issues-url]
-
-</h1>
-
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
@@ -34,8 +25,8 @@
 
 <p align="center">
     <br>
-    <img src="[drawing.jpg](https://raw.githubusercontent.com/MichlF/data_science/unsupervised_movie_recommender/static/images/website1.png)" alt="Snippet of website" width="500"/>
-    <img src="[drawing.jpg](https://raw.githubusercontent.com/MichlF/data_science/unsupervised_movie_recommender/static/images/website2.png)" alt="Snippet of website" width="500"/>
+    <img src="https://github.com/MichlF/projects/blob/main/data_science/unsupervised_movie_recommender/static/images/website1.PNG?raw=True" alt="Snippet of website" width="500"/>
+    <img src="https://github.com/MichlF/projects/blob/main/data_science/unsupervised_movie_recommender/static/images/website1.PNG?raw=True" alt="Snippet of website" width="500"/>
     <br>
 </p>
 
