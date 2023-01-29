@@ -1,0 +1,14 @@
+beautifulsoup4==4.11.1
+dill==0.3.6
+Gooey==1.0.8.1
+imbalanced_learn==0.9.1
+imblearn==0.0
+langdetect==1.0.9
+matplotlib==3.6.2
+numpy==1.23.4
+pandas==1.5.1
+requests==2.28.1
+scikit_learn==1.2.1
+seaborn==0.12.2
+spacy==3.4.3
+xgboost==1.7.1
