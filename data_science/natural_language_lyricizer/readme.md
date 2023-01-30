@@ -18,8 +18,8 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/MichlF/sports_object_detection/issues">Report Bug</a> •
-    <a href="https://github.com/MichlF/sports_object_detection/issues">Request Feature</a>
+    <a href="https://github.com/MichlF/projects/issues">Report Bug</a> •
+    <a href="https://github.com/MichlF/projects/issues">Request Feature</a>
 </p>
 
 ---
