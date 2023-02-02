@@ -8,6 +8,7 @@
     </h4>
 </div>
 <form action="" method="POST" onsubmit="this.action = location.pathname;">
+    {{ form.csrf_token }}
     <!-- How many recommendations should be retrieved -->
     <label for="refinement">How many recommendations do you want?</label>
     <input type="number" id="n-recommendations" name="n-recommendations" value="5">

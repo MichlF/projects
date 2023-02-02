@@ -1,16 +1,45 @@
 from flask import Flask, render_template, request, session, flash
+from flask_wtf import FlaskForm
+from flask_wtf.csrf import CSRFProtect
+from wtforms import HiddenField
 from scripts.recommender import Recommender
 
 app = Flask(__name__)
-app.secret_key = "A-super-secret-key"  # need to set one if we use session
+# Set secret_key for using session
+app.secret_key = "A-super-secret-key"
+# Protection against cookie attacks
+app.config.update(
+    SESSION_COOKIE_SECURE=True,
+    SESSION_COOKIE_HTTPONLY=True,
+    SESSION_COOKIE_SAMESITE="Lax",
+)
+
 recommend = Recommender()
 movies = recommend.movies_information["title"].values
+
+
+# Cross-Site Request Forgery (CSRF) protection
+csrf = CSRFProtect(app)
+
+
+class CSRFTokenForm(FlaskForm):
+    csrf_token = HiddenField()
+
+
+# Use proper HTTP headers to protect the app
+@app.after_request
+def add_security_headers(response):
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-XSS-Protection"] = "1; mode=block"
+    response.headers["X-Frame-Options"] = "deny"
+    return response
 
 
 @app.route("/", methods=["GET", "POST"])
 def index(movies=movies):
     """Creates main landing page"""
     # Reset recommendations for this session, and create movies_added if it doesn't exist
+    form = CSRFTokenForm()
     session["recommendations"] = {}
     if not session.get("movies_added"):
         session["movies_added"] = {}
@@ -39,12 +68,13 @@ def index(movies=movies):
     else:
         session["movies_added"] = {}
 
-    return render_template("index.html", movie_titles=movies)
+    return render_template("index.html", movie_titles=movies, form=form)
 
 
 @app.route("/random_recommender", methods=["GET", "POST"])
 def random_recommender():
     """a naive/random recommender"""
+    form = CSRFTokenForm()
     recommendations = session.get("recommendations")
     movies_added = session.get("movies_added")
     user_matrix = recommend.recommend_model_random(user_movies=movies_added)
@@ -53,13 +83,14 @@ def random_recommender():
     )
 
     return render_template(
-        "recommendations.html", titles=titles, poster_links=poster_links, genres=genres
+        "recommendations.html", titles=titles, poster_links=poster_links, genres=genres, form=form
     )
 
 
 @app.route("/nmf_recommender", methods=["GET", "POST"])
 def nmf_recommender():
     """a recommender based on non-negative matrix factorization"""
+    form = CSRFTokenForm()
     recommendations = session.get("recommendations")
     movies_added = session.get("movies_added")
     user_matrix = recommend.recommend_model_nmf(user_movies=movies_added)
@@ -68,13 +99,14 @@ def nmf_recommender():
     )
 
     return render_template(
-        "recommendations.html", titles=titles, poster_links=poster_links, genres=genres
+        "recommendations.html", titles=titles, poster_links=poster_links, genres=genres, form=form
     )
 
 
 @app.route("/nbcfilter_recommender", methods=["GET", "POST"])
 def nbcfilter_recommender():
     """a recommender based on neighborhood-based collaborative filtering"""
+    form = CSRFTokenForm()
     recommendations = session.get("recommendations")
     movies_added = session.get("movies_added")
     user_matrix = recommend.recommend_model_nbcfilter(user_movies=movies_added)
@@ -83,7 +115,7 @@ def nbcfilter_recommender():
     )
 
     return render_template(
-        "recommendations.html", titles=titles, poster_links=poster_links, genres=genres
+        "recommendations.html", titles=titles, poster_links=poster_links, genres=genres, form=form
     )
 
 
@@ -96,7 +128,7 @@ def clear_movies():
 
 
 def main():
-    app.run(debug=False, port=4242)
+    app.run(debug=True, port=4242)
 
 
 if __name__ == "__main__":

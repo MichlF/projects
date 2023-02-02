@@ -10,6 +10,7 @@
     </h4>
 </div>
 <form action="/" method="POST">
+    {{ form.csrf_token }}
     <!-- User movie seen (input + dropdown) and rating (slider) -->
     <label for="movie-title">I've seen the movie:</label>
     <input type="text" id="movie-title" name="movie-title" list="movie-titles">
