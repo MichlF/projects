@@ -39,7 +39,7 @@
 
 ## How To Use
 
-For this app to work you can either just navigate to [this website]() or clone this repo onto your computer. Make sure to install the requirements from the `requirements.txt` file along with it.
+For this app to work you can either just navigate to [this website](https://michlf.pythonanywhere.com/) [^1] or clone this repo onto your computer. Make sure to install the requirements from the `requirements.txt` file along with it.
 
 Once you've ran the preprocessing script to obtain your base models, you can run the `app.py` file either from your IDE or the terminal:
 
@@ -69,3 +69,6 @@ Don't forget to give the project a star! Thanks again!
 > [blog.michelfailing.de](https://blog.michelfailing.de) &nbsp;&middot;&nbsp;
 > GitHub [@MichlF](https://github.com/MichlF) &nbsp;&middot;&nbsp;
 > Twitter [@FailingMichel](https://twitter.com/FailingMichel)
+
+
+[^1]: The website might be very slow due to the restrictions of PythonAnywhere's basic plan. Random recommender mode should work decently though.
