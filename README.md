@@ -53,7 +53,7 @@ The Tech stack for all of these project (among others):
 - [Supermarket Markov Simulation](https://github.com/MichlF/projects/tree/main/data_science/supermarket_markov_simulation): Visualization of supermarket customer behavior based on *Monte Carlo Markov Chain Simulations*.
 - [Regression: the Bikeshare dataset](https://github.com/MichlF/projects/tree/main/data_science/regression_bikeshare): A Kaggle competition dataset to predict bike rentals from the BikeShare dataset using regression models in *scikit-learn*.
 - [Temperature forecast for Berlin-Tempelhof](https://github.com/MichlF/projects/tree/main/data_science/temperature_forecast): Visualization of a *Time-series analysis* on temperature data, i.e. a temperature forecase, for Berlin-Tempelhof using *AR/SARIMAX* modelling and interactive plotting in *Plotly*.
-- [Unsupervised Movie Recommender](https://github.com/MichlF/projects/tree/main/data_science/unsupervised_movie_recommender): Web app that recommends movies based on *unsupervised learning* modelling (*Neighborhood-based Collaborative Filtering* and *Collaborative Filtering with Non-Negative Matrix Factorization*) deployed with *Flask*.
+- [Unsupervised Movie Recommender](https://github.com/MichlF/projects/tree/main/data_science/unsupervised_movie_recommender): Web app that recommends API-requested movies based on *unsupervised learning* modelling (*Neighborhood-based Collaborative Filtering* and *Collaborative Filtering with Non-Negative Matrix Factorization*) deployed with *Flask*.
 
 ## Science
 - Resources of a few peer-reviewed publications ([find repository here](https://github.com/MichlF/science_projects)):
