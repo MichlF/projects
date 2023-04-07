@@ -6,22 +6,23 @@ Feel free to also [check out my blog](https://blog.michelfailing.de) that has an
 The Tech stack for all of these project (among others):
 <br>  
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=flat-square&logo=visual-studio-code&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=flat-squaer&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=flat-square&logo=github&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-2c2c2c.svg?style=flat-square&logo=github&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white)  
 ![Python](https://img.shields.io/badge/python-3670A0?style=flat-square&logo=python&logoColor=ffdd54)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat-square&logo=javascript&logoColor=%23F7DF1E)  
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat-square&logo=javascript&logoColor=%23F7DF1E)
+![Rust](https://img.shields.io/badge/rust-b7410e?style=flat-square&logo=rust&logoColor=000000)  
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=flat-square&logo=css3&logoColor=white)
-[![Flask](https://img.shields.io/badge/-Flask-000000?style=flat-square&logo=Flask&logoColor=ffffff)](https://flask.palletsprojects.com/)  
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=flat-squaer&logo=postgresql&logoColor=white)
+[![Flask](https://img.shields.io/badge/-Flask-444444?style=flat-square&logo=Flask&logoColor=ffffff)](https://flask.palletsprojects.com/)  
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=flat-square&logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=flat-square&logo=mongodb&logoColor=white)  
 ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=flat-square&logo=numpy&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=flat-square&logo=pandas&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=flat-square&logo=Matplotlib&logoColor=black)
 ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=flat-square&logo=plotly&logoColor=white)  
 ![Scipy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=flat-square&logo=scipy&logoColor=%white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat-squaree&logo=scikit-learn&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat-square&logo=scikit-learn&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=flat-square&logo=TensorFlow&logoColor=white)
 ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=flat-square&logo=Keras&logoColor=white)
 <br>
@@ -29,11 +30,13 @@ The Tech stack for all of these project (among others):
 
 ## Apps and app-likes
 - [Berlin Bürgerservice Bot](https://github.com/MichlF/berlin_buergerservice_bot): JS *Webscraping* app that scans Berlin's municipality appointment service website for available timeslots of Berlin's Administrative Office for Citizens.
+- [Chat-GPT CLI Integration](https://github.com/MichlF/cli_chatgpt): A *CLI integration of Chat-GPT3.5* written in Rust.
 - [Color wheel](https://github.com/MichlF/misc/blob/master/colors_colorwheel): Color-wheel generator for isoluminant colors in HSV, Cie-L*ab and Xyz space ready to be applied to *PsychoPy*.
 - [Pokerstars Reader](https://github.com/MichlF/pokerstars_reader): App that provides live table and player statistics when playing Poker on a PokerStars table.
 - [RPi: Face recognition](https://github.com/MichlF/rpi_simple_face_recognition): App that allows *Raspberry Pis* to detect and recognize faces using one's own pretrained face recognition model.
 - [RPi: LCD Moisture Meter](https://github.com/MichlF/rpi_moisture_meter): App that allows *Raspberry Pi Pico* microcontrollers to display soil humidity levels measured by capacitive onto a LCD screen.
 - [RPi: Motion detection](https://github.com/MichlF/rpi_motion_detection): App that allows *Raspberry Pis* to detect motion based on PIR sensor input.
+- [Tennis DB API](https://github.com/MichlF/tdb_api): A simple *API* written in Rust meant to retrieve data from the Tennis subreddit *PostgreSQL* database that was created as part of the [*Sentimental(al) Reddit Slack Bot project*](https://github.com/MichlF/projects/tree/main/data_science/reddit_sentiment).
 
 ## Modules / Wrapper
 - [PrettyShortML](https://github.com/MichlF/PrettyShortML): *Scikit-learn wrapper* Python module for faster ML model pipelining, better plotting and more.
