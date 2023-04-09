@@ -34,7 +34,7 @@ The Tech stack for all of these project (among others):
 - [Color wheel](https://github.com/MichlF/misc/blob/master/colors_colorwheel): Color-wheel generator for isoluminant colors in HSV, Cie-L*ab and Xyz space ready to be applied to *PsychoPy*.
 - [Pokerstars Reader](https://github.com/MichlF/pokerstars_reader): App that provides live table and player statistics when playing Poker on a PokerStars table.
 - [RPi: Face recognition](https://github.com/MichlF/rpi_simple_face_recognition): App that allows *Raspberry Pis* to detect and recognize faces using one's own pretrained face recognition model.
-- [RPi: LCD Moisture Meter](https://github.com/MichlF/rpi_moisture_meter): App that allows *Raspberry Pi Pico* microcontrollers to display soil humidity levels measured by capacitive onto a LCD screen.
+- [RPi: LCD Moisture Meter](https://github.com/MichlF/rpi_moisture_meter): This C++ app enables Raspberry Pi Pico microcontrollers to display soil humidity levels, as measured by capacitive sensors, on an LCD screen.
 - [RPi: Motion detection](https://github.com/MichlF/rpi_motion_detection): App that allows *Raspberry Pis* to detect motion based on PIR sensor input.
 - [Tennis DB API](https://github.com/MichlF/tdb_api): A simple *API* written in Rust meant to retrieve data from the Tennis subreddit *PostgreSQL* database that was created as part of the [*Sentimental(al) Reddit Slack Bot project*](https://github.com/MichlF/projects/tree/main/data_science/reddit_sentiment).
 

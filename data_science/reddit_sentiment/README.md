@@ -1,6 +1,6 @@
 # Sentiment(al) Reddit Slack Bot
 
-A *Slack bot* that provides live updates on positive and negative postings regarding the topic of Data Science using *Docker*, *API interactions*, *MongoDB*, *PostgreSQL* and *VADER-sentiment analysis*. [Here is an API](https://github.com/MichlF/projects/tree/main/data_science/reddit_sentiment) for the underlying database written in Rust.
+A *Slack bot* that provides live updates on positive and negative postings regarding the topic of Data Science using *Docker*, *API interactions*, *MongoDB*, *PostgreSQL* and *VADER-sentiment analysis*. [Here is an API](https://github.com/MichlF/tdb_api) for the underlying database written in Rust.
 
 Here is a sample of what the bot can post to *Slack*:
 
