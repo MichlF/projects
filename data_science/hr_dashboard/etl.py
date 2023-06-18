@@ -1,4 +1,5 @@
 import datetime as dt
+from typing import Union
 
 import pandas as pd
 
@@ -18,8 +19,8 @@ def get_distribution(
 def get_signups(
     data: pd.DataFrame,
     date_column: str,
-    start: str | dt.datetime | None = None,
-    end: str | dt.datetime | None = None,
+    start: Union[str, dt.datetime, None] = None,
+    end: Union[str, dt.datetime, None] = None,
 ) -> pd.DataFrame:
     data = data.copy()
     data[date_column] = pd.to_datetime(data[date_column])
@@ -73,7 +74,7 @@ def get_agg_distribution(
 
 
 def search(
-    data: pd.DataFrame, column: str | None, search_term: str
+    data: pd.DataFrame, column: Union[str, None], search_term: str
 ) -> pd.DataFrame:
     if column in ["Age", "Salary"]:
         search_term = int(search_term)  # type: ignore
@@ -97,4 +98,5 @@ if __name__ == "__main__":
     accumulated_signups = get_signups(
         data, "Onboarding Date", dt.datetime(2020, 1, 1), dt.datetime(2022, 1, 1)
     )
+    search_result = search(data, "Onboarding Date", "2022-11-20")
     search_result = search(data, "Onboarding Date", "2022-11-20")
