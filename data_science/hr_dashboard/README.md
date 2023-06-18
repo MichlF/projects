@@ -10,4 +10,4 @@ The dashboard can be locally hosted in an environment with Python and Streamlit 
 streamlit run .\Home.py
 ```
 
-...or can be [found online here](#). Have a look at it yourself !
+...or can be [found online here](https://hr-dashboard.streamlit.app/). Have a look at it yourself !
