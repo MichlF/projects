@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import pandas as pd
 import streamlit as st
 from etl import search
@@ -9,7 +11,7 @@ st.set_page_config(
 )
 
 # Data load
-data = pd.read_csv("data/data.csv")
+data = pd.read_csv(Path(__file__).parents[1] / "data/data.csv")
 df = pd.DataFrame()
 
 # Header
