@@ -40,9 +40,7 @@ def get_signups(
     monthly_accumulated = data.resample("M").size().cumsum()
 
     # Create a new pandas DataFrame with the cumulative sum and monthly datetime index
-    monthly_df = pd.DataFrame(
-        monthly_accumulated.values, columns=["Acc. Count"]
-    )
+    monthly_df = pd.DataFrame(monthly_accumulated.values, columns=["Acc. Count"])
     monthly_df.index = monthly_accumulated.index.to_period("M").to_timestamp()
 
     return monthly_df
@@ -66,9 +64,7 @@ def get_agg_distribution(
             "70-79",
             "80+",
         ]
-        data["Age"] = pd.cut(
-            data["Age"], bins=age_bins, labels=age_labels, right=False
-        )
+        data["Age"] = pd.cut(data["Age"], bins=age_bins, labels=age_labels, right=False)
 
     return data.groupby(group_column_name)[agg_column_name].mean()
 

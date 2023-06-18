@@ -1,5 +1,4 @@
 import datetime as dt
-from pathlib import Path
 
 import pandas as pd
 import plotly.graph_objects as go
@@ -13,7 +12,7 @@ st.set_page_config(
 )
 
 # # Data load
-data = pd.read_csv(Path(__file__).parents[1] / "data/data.csv")
+data = pd.read_csv("data/data.csv")
 df = pd.DataFrame()
 
 # Header
