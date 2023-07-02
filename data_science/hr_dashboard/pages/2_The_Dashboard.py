@@ -73,7 +73,44 @@ st.markdown(
 )
 st.write("")
 
-col1, col2 = st.columns([0.6, 0.4], gap="large")
+buffer, col2, buffer2 = st.columns([0.2, 0.6, 0.2], gap="large")
+with col2:
+    slider_times = st.slider(
+        "Over which period would you like to see the onboardings?",
+        value=[
+            pd.to_datetime(data["Onboarding Date"]).min().to_pydatetime(),
+            pd.to_datetime(data["Onboarding Date"]).max().to_pydatetime(),
+        ],
+        format="MM-DD-YY",
+        help="Use the slider to indicate your date range of choice.",
+    )
+    tab3, tab4 = st.tabs(["📈 Chart", "🗃 Data"])
+    plot_data = get_signups(
+        data, "Onboarding Date", slider_times[0], slider_times[1]
+    )
+    with tab3:
+        st.markdown(
+            (
+                "<h5 style='text-align: center;'>Accumulated onboarded"
+                " individuals over time (between"
+                f" {slider_times[0].strftime('%y-%m-%d')} and"
+                f" {slider_times[1].strftime('%y-%m-%d')})</h1>"
+            ),
+            unsafe_allow_html=True,
+        )
+        st.line_chart(plot_data)
+
+    with tab4:
+        st.markdown(
+            (
+                "<h5 style='text-align: center;'>Data: Accumulated onboarded"
+                " individuals over time</h1>"
+            ),
+            unsafe_allow_html=True,
+        )
+        tab4.write(plot_data)
+
+buffer, col1, buffer2 = st.columns([0.2, 0.6, 0.2], gap="large")
 with col1:
     tab1, tab2 = st.tabs(
         ["Average Salary by Profession", "Average Salary by Age"]
@@ -98,31 +135,3 @@ with col1:
             unsafe_allow_html=True,
         )
         st.bar_chart(get_agg_distribution(data, "Age", "Salary"))
-
-with col2:
-    tab3, tab4 = st.tabs(["📈 Chart", "🗃 Data"])
-    plot_data = get_signups(
-        data,
-        "Onboarding Date",
-        dt.datetime(2020, 1, 1),
-        dt.datetime(2022, 1, 1),
-    )
-    with tab3:
-        st.markdown(
-            (
-                "<h5 style='text-align: center;'>Accumulated onboarded"
-                " individuals over time</h1>"
-            ),
-            unsafe_allow_html=True,
-        )
-        st.line_chart(plot_data)
-
-    with tab4:
-        st.markdown(
-            (
-                "<h5 style='text-align: center;'>Data: Accumulated onboarded"
-                " individuals over time</h1>"
-            ),
-            unsafe_allow_html=True,
-        )
-        tab4.write(plot_data)
