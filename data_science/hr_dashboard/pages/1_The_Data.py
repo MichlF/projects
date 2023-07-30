@@ -24,15 +24,11 @@ st.markdown(
 st.divider()
 
 st.markdown(
-    "The data used here was randomly created (cudos @Gonçalo Chambel). No"
-    " identification with actual persons (living or deceased) is intended"
-    " or should be inferred."
-)
-
-st.markdown(
     (
-        "<div style='text-align: center;'>Text with basic formatting"
-        " applied</div>"
+        "<div style='text-align: center;'>The data used here was randomly"
+        " created (cudos @Gonçalo Chambel). No identification with actual"
+        " persons (living or deceased) is intended or should be"
+        " inferred.</div>"
     ),
     unsafe_allow_html=True,
 )
@@ -52,6 +48,7 @@ with col1:
     key = st.selectbox(
         label="Define a category:",
         options=[
+            "All data",
             "Name",
             "Email",
             "Age",
@@ -79,6 +76,17 @@ with col2:
         df = search(data, key, search_term)
 
 if not df.empty:
+    if key == "All data":
+        st.write("")
+        st.markdown(
+            (
+                "<div style='text-align: center;'>You choose 'All data' as"
+                " category, so we are showing all the data !</div>"
+            ),
+            unsafe_allow_html=True,
+        )
+        st.write("")
+
     st.data_editor(
         df,
         column_config={
@@ -98,6 +106,9 @@ else:
     st.write("")
     st.write("")
     st.markdown(
-        "Sorry, we couldn't find any data matching this category and"
-        " search term..."
+        (
+            "<div style='text-align: center;'>Sorry, we couldn't find any data"
+            " matching this category and search term....</div>"
+        ),
+        unsafe_allow_html=True,
     )

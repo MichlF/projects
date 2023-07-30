@@ -72,6 +72,9 @@ def get_agg_distribution(
 def search(
     data: pd.DataFrame, column: Union[str, None], search_term: str
 ) -> pd.DataFrame:
+    if column in ["All data"]:
+        return data
+    
     if column in ["Age", "Salary"]:
         search_term = int(search_term)  # type: ignore
 
